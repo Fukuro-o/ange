@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <!-- 
+        Name: Angelhine Karsten Vargas              Date: April , 2023
+        Section: BSCS 1-YB-1                        Midterm Activity #4
+        -->
+        <meta name="author" content = "Angelhine Karsten Vargas">
+    
+    <title>My Portfolio</title>
+    <link rel="icon" href="https://www.4shared.com/img/lRpJb9Ilge/s25/1877ae07c68/ITTO_icon" type="image/x-icon"> <!--This is for the tab icon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+
+      body{
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .header{
+        position: fixed;
+        width: 90%;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: transparent;
+        padding: 25px 15%;
+        transition-duration: .15s;
+      }
+
+      header.sticky{
+        padding: 12px 15%;
+
+      }
+
+      .logo{
+        color:#7da0a6;
+        font-size: 35px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .logo a{
+        color:#7da0a6;
+        text-decoration: none;
+      }
+
+      span{
+        color: #D7BE9B;
+      }
+
+      nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 8%;
+        padding-right: 8%;
+        background-color: #0D1F31;
+        height: 60px;
+        position: fixed;
+        width: 90%;
+      } 
+
+      nav li{
+        position: relative;
+      }
+
+      nav ul li{
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px 25px;
+      }
+
+      nav ul li a{
+        color: #CAC7B4;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover{
+        color: #7da0a6;
+        transition: .15s;
+      }
+
+      section{
+      padding: 120px 15%;
+      }
+
+      .home-section{
+        display: flex;
+        background: url("https://www.4shared.com/img/COHX5mOjfa/s25/18774c446e8/portfolio_howl") no-repeat center; 
+        color: #fff;
+        min-height: 800px;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      .name{
+        position: absolute;
+        top: 50%;
+        left: 8%;
+        transform: translateY(-50%);
+      }
+      
+      .text1{
+        color: #CAC7B4;
+        letter-spacing: 2px;
+        font-size: 20px;
+      }
+
+      .text2{
+        color: #D7BE9B;
+        margin: 20px 0px 20px;
+        font-size: 75px;
+      }
+
+      .about-section{
+        width: 100%;
+        padding: 80px 0px;
+        background-color:#031b32;
+      }
+
+      .about-section img{
+        height: 400px;
+        width: 400px;
+        border-radius: 50%;
+      }
+
+      .about-text{
+        width: 550px;
+      }
+
+      .about-text h2{
+        color: #CAC7B4;
+        font-size: 75px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+      }
+
+      .about-text h5{
+        color: #7da0a6;
+        letter-spacing: 2px;
+        font-size: 22px;
+        margin-bottom: 25px;
+        text-transform: capitalize;
+      }
+
+      .about-text p{
+        color: #CAC7B4;
+        letter-spacing: 1px;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 45px;
+        text-align: justify;
+        max-width: 590px;
+      }
+
+      .info{
+        width: 1130px;
+        max-width: 95%;
+        margin: 0 auto;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+      }
+
+      .interests-section{
+        background-color: #CAC7B4;
+        color: #031b32;
+        padding: 50px;
+        padding-bottom: 70px;
+        
+      }
+
+      .interests-section h2 {
+        font-size: 75px;
+        text-transform: capitalize;
+        margin-bottom: 40px;
+        margin-left: 25px;
+        padding-left: 20px;
+        margin-top: 40px;
+			}
+
+			.interests-section .row {
+				margin-left: auto;
+				margin-right: auto;
+				padding-bottom: 30px;
+				width: 70%;
+			}
+
+			.interests-section .item {
+				display: inline-block;
+				text-align: center;
+				width: 32%;
+			}
+
+			.interests-section .item h3{
+				font-size: 2em;
+				text-align: center;
+			}
+      
+			.interests-section .item p{
+				line-height: 1.8em;
+				text-align: center;
+			}		
+
+      .interests-section img {
+        border-radius: 3px;
+       }
+
+      .contact-section{
+        background-color: #031b32;
+        width: 100%;
+        padding: 80px 0px;
+        margin-left: auto;
+				margin-right: auto;
+        line-height: 1.8em;
+        display: inline-block;
+      }
+
+      .contact-section h2{
+        font-size: 75px;
+        text-transform: capitalize;
+        color: #CAC7B4;
+        font-size: 75px;
+        margin-bottom: 20px;
+        padding-left: 50px;
+        padding-bottom: 40px;
+      }
+
+      .contact-section form{
+        position: relative;
+      }
+
+      .contact-form form input, form textarea{
+        width: 100%;
+        padding: 20px;
+        border: none;
+        outline: none;
+        background-color:#D7BE9B;
+        color: #031b32;
+        font: 1rem;
+        border-radius: 10px;
+        margin-left: 15%;
+      }
+
+      .contact-section #name {
+				width: 70%;
+        margin-bottom: 30px;
+			}
+			.contact-section #email {
+        width: 70%;
+        margin-bottom: 20px;
+			}
+			.contact-section textarea {
+				width: 70%;
+        margin-top: 10px;
+			}
+
+      button{
+        margin-top: 18px;
+        background-color: #7da0a6;
+        color: #031b32;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 13px 30px;
+        border-radius: 30px;
+        transition: .15s;
+        margin-left: 48%;
+        display: inline-block;
+      }
+      
+      button:hover{
+        background-color: #7da0a6;
+        border: 2px solid #CAC7B4;
+        cursor: pointer;
+      }
+
+      .footer {
+				background-color: #0D1F31;
+        text-align: center;
+				padding: 10px;
+
+			}
+			.footer p{
+				color: #D7BE9B;
+				text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+			}
+
+      @media (max-width: 1270px){
+        header{
+            padding: 18px 4%;
+            transition: .15s;
+        }
+
+        header .sticky{
+          padding: 10px 4%;
+          transition: .15s;
+        }
+
+        section{
+          padding: 80px 4%;
+          transition: .15%;
+        }
+      }
+
+      @media (max-width: 990px) {
+          .about-text h2{
+          color: #CAC7B4;
+          font-size: 65px;
+          }
+
+          .about-section{
+          grid-template-columns: 1fr;
+          }
+
+          .about-section img{
+          text-align: center;
+          margin-right: 30px;
+          width: 600px;
+          height: 320px;
+          }
+
+          .contact-section{
+          grid-template-columns: 1fr;
+          }
+
+          .contact-form form input, form textarea{
+          margin-left: 50px;
+          }
+
+          button{
+          margin-left: 50px;
+          }
+      }
+
+    </style>
+  </head>
+
+  <body>
+        
+    <div class = "header">
+      <nav>
+        <div class="logo"><a href="#home"><span>Port</span>folio</a></div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-section">About Me</a></li>
+          <li><a href="#interest-section">My Interests</a></li>
+          <li><a href="#contact-section">Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <section class="home-section" id="home">
+      <div class = "name">
+      <h3 class = "text1">Hello, my name is</h3>
+      <h1 class = "text2">Angelhine</h1>
+      </div>
+    </section>
+    
+    <section class="about-section" id="about-section">
+      <div class="info">
+        <img src="https://www.4shared.com/img/2d_1_hj7jq/s25/18775437968/About_me_pfp">
+        <div class="about-text">
+          <h2 class="title">About me</h2>
+          <h5><span>Computer Science </span>Student</h5>
+          <p>I am Angelhine Karsten Vargas but people call me <q>Ange</q>. 
+            I love watching anime, reading manga, cosplaying, watching vtubers and  learning Japanese language. 
+            The reason why I chose BSCS is because I want to be a software engineer or to be a game developer in the future. 
+            My goal this year is to improve my communication skills and to improve my coding or my programming skills. 
+            I also want to accomplish a lot of things this year. My motto in life is <q>If you don&#39;t try, you&#39;ll never know</q>.
+          </p>
+        </div>
+      </div>
+
+    </section>
+    
+    <section class="interests-section" id="interest-section">
+      <h2 class="title">My Interests</h2>
+      <div class="item">
+        <img src="https://www.4shared.com/img/ZTWyDWHcku/s25/1877577df78/haikyu-vol-36" alt="Haikyuu" height = "200" width="200"/>
+        <h3>Anime</h3>
+        <p>I love watching anime and reading manga. </p>
+      </div>
+      <div class="item">
+        <img src="https://www.4shared.com/img/UEI158Ojku/s25/1877577d3c0/genshin_bg" alt="Genshin Impact" height = "200" width="250"/>
+        <h3>Games</h3>
+        <p>Playing games helps me to escape reality.</p>
+      </div>
+      <div class="item">
+        <img src="https://www.4shared.com/img/n5a3Rtj2ge/s25/18775b4d4f0/Language" alt="name" height = "200" width="175"/>
+        <h3>Language</h3>
+        <p>I'm love learning the Japanese language.</p>
+      </div>
+    </section>
+    
+    <section class="contact-section" id="contact-section">
+        <div class = "contact-form">
+        <h2 class="title">Contact Me</h2>
+        <form>
+          <input type="text" id="name" placeholder="Your Name"><br>
+          <input type="text" id="email" placeholder="Your Email"><br>
+          <textarea id="message" rows="4" cols="40" placeholder="Write your message here"></textarea><br>
+
+          <button type="button">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="footer">
+      <p>Copyright &copy; 2023 &#x7C; Angelhine Karsten Vargas</p>
+    </div>
+
+    </body>
+</html>
